@@ -38,21 +38,23 @@ public class StatsService {
         }
         return minMonth;
     }
+
     public long statBellowAverage(long[] sales) {
         double avgSale = statAvgSale(sales);
         long count = 0;
         for (int i = 0; i < sales.length; i++) {
-            if(sales[i] < avgSale){
+            if (sales[i] < avgSale) {
                 count++;
             }
         }
         return count;
     }
+
     public long statAboveAverage(long[] sales) {
         double avgSale = statAvgSale(sales);
         long count = 0;
         for (int i = 0; i < sales.length; i++) {
-            if(sales[i] > avgSale){
+            if (sales[i] > avgSale) {
                 count++;
             }
         }
